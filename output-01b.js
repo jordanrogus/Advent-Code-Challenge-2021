@@ -1,6 +1,6 @@
 // Code to read an input file and push it to an array
 var fs = require("fs");
-var text = fs.readFileSync("./advent-input-01").toString('utf-8');
+var text = fs.readFileSync("./input-01").toString('utf-8');
 var textByLine = text.split("\n")
 
 // Initialize count and new array
