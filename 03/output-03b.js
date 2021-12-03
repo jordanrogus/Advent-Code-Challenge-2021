@@ -50,6 +50,7 @@ const retrieveBinary = (array, type) => {
         // Filter array to only include items that meet the condition
         array = array.filter(item => item.charAt(i) == char);
 
+        // Returns array item when it is the only one left. If this never results in one item nothing will be returned
         if (array.length == 1){
             return array[0];
         }
