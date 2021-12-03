@@ -75,7 +75,7 @@ console.log(calcPower(multiDimArray));
 
 //////////////////////// HELPER FUNCTIONS ////////////////////////
 
-// Return most frequent element in array
+// Return most frequent element in array as a string
 function _getMostFrequent(arr) {
     const hashmap = arr.reduce((acc, val) => {
         acc[val] = (acc[val] || 0) + 1
@@ -84,7 +84,7 @@ function _getMostFrequent(arr) {
     return Object.keys(hashmap).reduce((a, b) => hashmap[a] > hashmap[b] ? a : b)
 }
 
-// Return least frequent element in array
+// Return least frequent element in array as a string
 function _getLeastFrequent(arr) {
     //Store the number counts in object
     const count = arr.reduce((a, b) => {
