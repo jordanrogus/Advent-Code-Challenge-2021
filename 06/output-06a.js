@@ -17,18 +17,15 @@ for (i = 1; i <= days; i++) {
     // Initialize the count of new lantern fish
     let countNewLanternFish = 0;
 
-    // Loop through each element in the array
-    for (j = 0; j < currentLanternfishAgesArray.length; j++) {
-
-        // Check if any element in the array is not 0 then subtract one 
-        if (currentLanternfishAgesArray[j] != 0) {
-            currentLanternfishAgesArray.splice(j, 1, currentLanternfishAgesArray[j] - 1);
-        // Check if any element in the array is 0 then replace with a 6 and add the the count of new lantern fish
-        } else {
-            currentLanternfishAgesArray.splice(j, 1, 6);
+    // Update array based on conditions
+    currentLanternfishAgesArray = currentLanternfishAgesArray.map( function(value) { 
+        if (value == 0){
             countNewLanternFish++;
+            return 6;
+        } else {
+            return value - 1;
         }
-    }
+    } );
 
     // For each new lantern fish append to the array with an '8'
     for (k = 1; k <= countNewLanternFish; k++) {
@@ -40,4 +37,4 @@ for (i = 1; i <= days; i++) {
     */
 }
 
-console.log("Count of Lantern Fish: " + currentLanternfishAgesArray.length);
+console.log("Count of lanternfish: " + currentLanternfishAgesArray.length);
