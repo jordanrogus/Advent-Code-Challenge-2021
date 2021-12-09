@@ -4,8 +4,8 @@ var text = fs.readFileSync("./input-07").toString('utf-8');
 var array = text.split(",").map(Number);
 
 // Log the input
-console.log("Input array: \n" + array);
-console.log("----------------------------------------------------------");
+// console.log("Input array: \n" + array);
+// console.log("----------------------------------------------------------");
 
 // Initialize array to hold the possible fuel values
 let fuelCost = [];
