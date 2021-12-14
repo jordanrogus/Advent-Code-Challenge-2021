@@ -25,6 +25,7 @@ function partA(inputArray){
             const element = inputArray[i][j];
 
             // Determine if line is corrupted
+            // Start at the first closing character - create chunk then work outside to create chunks
 
             // For corrupted lines stop at the first incorrect closing character
 
