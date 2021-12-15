@@ -8,6 +8,27 @@ const inputArray = text.split('\n')
     .map(row => row.split(' | '))
     .map(row => [row[0].split(' '), row[1].split(' ')]);
 
+/* 
+Fun way to map input
+
+const lines = fs
+  .readFileSync("day08.txt", { encoding: "utf-8" })
+  .split("\n") // Split on newline
+  .map((line) => {
+    const [signalPatterns, outputValue] = line.split(" | ").map((x) =>
+      x.split(" ").map((string) => {
+        const letters = [...string];
+        letters.sort();
+        return letters.join``;
+      })
+    );
+    return {
+      signalPatterns,
+      outputValue,
+    };
+  });
+*/
+
 // Initialize result
 let result = 0;
 
